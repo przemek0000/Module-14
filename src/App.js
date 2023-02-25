@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 
 
 function App() {
-    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : []);
-    const [hideDoneTasks, setHideDoneTasks] = useState(JSON.parse(localStorage.getItem("hideDoneTasks")) ? JSON.parse(localStorage.getItem("hideDoneTasks")) : false);
+    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
+    const [hideDoneTasks, setHideDoneTasks] = useState(JSON.parse(localStorage.getItem("hideDoneTasks")) || false);
 
-   useEffect ( () => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    localStorage.setItem("hideDoneTasks", hideDoneTasks);
-   }, [tasks, hideDoneTasks]);
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        localStorage.setItem("hideDoneTasks", hideDoneTasks);
+    }, [tasks, hideDoneTasks]);
 
     const toggleHideDoneTasks = () => {
         setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
