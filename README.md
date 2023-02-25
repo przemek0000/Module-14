@@ -1,6 +1,6 @@
-# TO-DO-LIST version 1.1
+# TO-DO-LIST version 1.2
 
-- [TO-DO-LIST version 1.1](#to-do-list-version-11)
+- [TO-DO-LIST version 1.2](#to-do-list-version-12)
   - [Demo](#demo)
   - [Introduction](#introduction)
   - [Technology used](#technology-used)
@@ -12,13 +12,14 @@
 
 ## Demo
 
-[Website](https://przemek0000.github.io/Module-8/)
+[Website](https://przemek0000.github.io/Module-10a/)
 
 ## Introduction
 
 ![titleImage](public/to-do-list.jpg)
 
-This is updated version TO-DO-LIST version 1.1 created in react.js library. We can find here everything what is in previous one plus extra some features. These are 2 buttons: first one letting us to hide all done tasks and second, by simple click on it mark all tasks done. 
+This is updated version TO-DO-LIST version 1.2 created in react.js library. We can find here everything what is in previous one plus extra save tasks feature. When you close your browser,
+your tasks will be saved. 
 
 ## Technology used
 
