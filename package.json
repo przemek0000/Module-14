@@ -1,8 +1,8 @@
 {
-  "name": "module-8",
-  "version": "0.1.0",
+  "name": "module-11a",
+  "version": "1.3.0",
   "private": true,
-  "homepage": "https://przemek0000.github.io/Module-10a/",
+  "homepage": "https://przemek0000.github.io/Module-11a/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

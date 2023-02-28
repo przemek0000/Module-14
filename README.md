@@ -1,6 +1,6 @@
-# TO-DO-LIST version 1.2
+# TO-DO-LIST version 1.3
 
-- [TO-DO-LIST version 1.2](#to-do-list-version-12)
+- [TO-DO-LIST version 1.3](#to-do-list-version-13)
   - [Demo](#demo)
   - [Introduction](#introduction)
   - [Technology used](#technology-used)
@@ -18,7 +18,7 @@
 
 ![titleImage](public/to-do-list.jpg)
 
-This is updated version TO-DO-LIST version 1.2 created in react.js library. We can find here everything what is in previous one plus extra save tasks feature. When you close your browser,
+This is updated version TO-DO-LIST version 1.3 created in react.js library. We can find here everything what is in previous one plus extra save tasks feature. When you close your browser,
 your tasks will be saved. 
 
 ## Technology used
