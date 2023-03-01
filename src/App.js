@@ -4,6 +4,22 @@ import Section from "./Section";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import { useEffect, useState } from "react";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+    colors: {
+        done: {
+            display: "hsl(120, 100%, 25%)",
+            hover: "hsl(120, 100%, 28%)",
+            active: "hsl(120, 100%, 31%)"
+        },
+        remove: {
+            display: "hsl(0, 100%, 50%)",
+            hover: "hsl(0, 100%, 62%)",
+            active: "hsl(0, 100%, 68%)"
+        }
+    }
+};
 
 
 function App() {
@@ -55,7 +71,7 @@ function App() {
         ))
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <Header
                 title={"Lista zadań"}
             />
@@ -75,7 +91,7 @@ function App() {
                     toggleHideDoneTasks={toggleHideDoneTasks}
                     markAllDoneTasks={markAllDoneTasks} />}
             />
-        </ >
+        </ ThemeProvider>
     );
 }
 
