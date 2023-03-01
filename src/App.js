@@ -18,6 +18,9 @@ const theme = {
             hover: "hsl(0, 100%, 62%)",
             active: "hsl(0, 100%, 68%)"
         }
+    },
+    breakPoints: {
+        mobiles: 767
     }
 };
 

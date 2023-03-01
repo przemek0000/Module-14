@@ -9,7 +9,7 @@ export const StyledDiv = styled.div`
     display: flex;
     gap: 20px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobiles}px) {
         flex-direction: column;
     }
 `;
@@ -23,7 +23,7 @@ export const StyledHeader = styled.header`
     border-bottom: 2px solid #e6e6e6;
     font-weight: 700;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakPoints.mobiles}px) {
         grid-template-columns: 1fr;
     }
 `;
