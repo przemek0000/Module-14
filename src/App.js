@@ -36,7 +36,7 @@ function App() {
         tasks,
         markAllDoneTasks,
         toggleDoneTask,
-        removeButton,
+        removeTask,
         addNewTask
     } = useTasks();
 
@@ -54,7 +54,7 @@ function App() {
                 body={<Tasks tasks={tasks}
                     hideDoneTasks={hideDoneTasks}
                     toggleDoneTask={toggleDoneTask}
-                    removeButton={removeButton} />}
+                    removeTask={removeTask} />}
                 buttons={<Buttons tasks={tasks}
                     hideDoneTasks={hideDoneTasks}
                     disabled={tasks.every(({ done }) => done)}

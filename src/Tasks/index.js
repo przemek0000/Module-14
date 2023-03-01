@@ -1,6 +1,6 @@
 import { StyledTasks, StyledList, StyledButtons } from "./styled";
 
-const Tasks = ({ tasks, hideDoneTasks, toggleDoneTask, removeButton }) => (
+const Tasks = ({ tasks, hideDoneTasks, toggleDoneTask, removeTask }) => (
     <StyledTasks>
         {tasks.map(task => (
             <StyledList 
@@ -13,7 +13,7 @@ const Tasks = ({ tasks, hideDoneTasks, toggleDoneTask, removeButton }) => (
                 <div className={`task__content ${task.done ? "task__content--done" : ""}`}>
                     {task.content}
                 </div>
-                <StyledButtons remove onClick={() => removeButton(task.id)}>
+                <StyledButtons remove onClick={() => removeTask(task.id)}>
                     🗑
                 </StyledButtons>
             </StyledList>

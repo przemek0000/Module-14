@@ -26,7 +26,7 @@ const useTasks = () => {
         }))
     )
 
-    const removeButton = (id) => {
+    const removeTask = (id) => {
         setTasks(tasks => tasks.filter(task => task.id !== id))
     }
 
@@ -43,7 +43,7 @@ const useTasks = () => {
         tasks,
         markAllDoneTasks,
         toggleDoneTask,
-        removeButton,
+        removeTask,
         addNewTask
     }
 }
