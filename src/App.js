@@ -1,68 +1,7 @@
-import Header from "./common/Header";
-import Form from "./features/tasks/Form"
-import Section from "./common/Section";
-import Tasks from "./features/tasks/TasksList";
-import Buttons from "./features/tasks/Buttons";
-import { ThemeProvider } from "styled-components";
-import useTasks from "./useTasks";
-import { useState } from "react";
-
-const theme = {
-    colors: {
-        done: {
-            display: "hsl(120, 100%, 25%)",
-            hover: "hsl(120, 100%, 28%)",
-            active: "hsl(120, 100%, 31%)"
-        },
-        remove: {
-            display: "hsl(0, 100%, 50%)",
-            hover: "hsl(0, 100%, 62%)",
-            active: "hsl(0, 100%, 68%)"
-        }
-    },
-    breakPoints: {
-        mobiles: 767
-    }
-};
+import AppTasks from "./features/tasks/tasks";
 
 function App() {
-    const [hideDoneTasks, setHideDoneTasks] = useState(JSON.parse(localStorage.getItem("hideDoneTasks")) || false);
-
-    const toggleHideDoneTasks = () => {
-        setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
-    }
-
-    const {
-        tasks,
-        markAllDoneTasks,
-        toggleDoneTask,
-        removeTask,
-        addNewTask
-    } = useTasks();
-
-    return (
-        <ThemeProvider theme={theme}>
-            <Header
-                title={"Lista zadań"}
-            />
-            <Section
-                title={"Dodaj nowe zadanie"}
-                body={<Form addNewTask={addNewTask} />}
-            />
-            <Section
-                title={"Lista zadań"}
-                body={<Tasks tasks={tasks}
-                    hideDoneTasks={hideDoneTasks}
-                    toggleDoneTask={toggleDoneTask}
-                    removeTask={removeTask} />}
-                buttons={<Buttons tasks={tasks}
-                    hideDoneTasks={hideDoneTasks}
-                    disabled={tasks.every(({ done }) => done)}
-                    toggleHideDoneTasks={toggleHideDoneTasks}
-                    markAllDoneTasks={markAllDoneTasks} />}
-            />
-        </ ThemeProvider>
-    );
+    return <AppTasks />
 }
 
 export default App;
