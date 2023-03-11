@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+const StyledGlobal = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -14,3 +17,5 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
+`
+export default StyledGlobal;
