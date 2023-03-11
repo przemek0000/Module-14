@@ -6,7 +6,8 @@ import Buttons from "./Buttons";
 import { ThemeProvider } from "styled-components";
 import useTasks from "../../useTasks";
 import { useState } from "react";
-
+import { selectTasks } from "./tasksSlice";
+import { useSelector } from "react-redux";
 
 const theme = {
     colors: {
@@ -33,8 +34,9 @@ function AppTasks() {
         setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
     }
 
+    const {tasks} = useSelector(selectTasks);
+    
     const {
-        tasks,
         markAllDoneTasks,
         toggleDoneTask,
         removeTask,
