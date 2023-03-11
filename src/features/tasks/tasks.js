@@ -30,7 +30,6 @@ function AppTasks() {
     const { tasks } = useSelector(selectTasks);
 
     const {
-        markAllDoneTasks,
         removeTask,
     } = useTasks();
 
@@ -48,8 +47,7 @@ function AppTasks() {
                 body={<Tasks
                     removeTask={removeTask} />}
                 buttons={<Buttons
-                    disabled={tasks.every(({ done }) => done)}
-                    markAllDoneTasks={markAllDoneTasks} />}
+                    disabled={tasks.every(({ done }) => done)} />}
             />
         </ ThemeProvider>
     );
