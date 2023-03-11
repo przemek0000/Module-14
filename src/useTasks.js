@@ -40,11 +40,7 @@ const useTasks = () => {
         ))
 
     return {
-        // tasks,
-        markAllDoneTasks,
-        toggleDoneTask,
-        removeTask,
-        addNewTask
+       
     }
 }
 

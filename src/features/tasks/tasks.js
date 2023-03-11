@@ -35,17 +35,14 @@ function AppTasks() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Header
-                title={"Lista zadań"}
-            />
+            <Header title={"Lista zadań"} />
             <Section
                 title={"Dodaj nowe zadanie"}
                 body={<Form />}
             />
             <Section
                 title={"Lista zadań"}
-                body={<Tasks
-                    removeTask={removeTask} />}
+                body={<Tasks />}
                 buttons={<Buttons
                     disabled={tasks.every(({ done }) => done)} />}
             />

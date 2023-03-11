@@ -21,12 +21,14 @@ const tasksSlicer = createSlice({
             state.tasks.map(task => {
                 task.done = true;
             })
+        },
+        removeTask: (state, action) => {
+            state.tasks = state.tasks.filter(task => task.id !== action.payload);
         }
-
     }
 })
 
 export const { addTask, toggleHideDoneTasks,
-    toggleDoneTask, markAllDoneTasks } = tasksSlicer.actions;
+    toggleDoneTask, markAllDoneTasks, removeTask } = tasksSlicer.actions;
 export const selectTasks = ({ tasks }) => tasks;
 export default tasksSlicer.reducer;
