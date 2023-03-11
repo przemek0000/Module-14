@@ -18,8 +18,7 @@
 
 ![titleImage](public/to-do-list.jpg)
 
-This is updated version TO-DO-LIST version 1.3 created in react.js library. We can find here everything what is in previous one plus extra save tasks feature. When you close your browser,
-your tasks will be saved. 
+This is updated version TO-DO-LIST version 1.4 created in react.js library. We can find here everything what is in previous one plus extra save tasks feature(this version doesent store tasks in memory). Version 1.4 was extented for redux library.
 
 ## Technology used
 
@@ -32,6 +31,7 @@ your tasks will be saved.
 - MEDIA QUERY
 - IMMUTABILITY OBJECTS
 - REACT.JS
+- REDUX
 
 ## Available Scripts
 

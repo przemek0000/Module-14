@@ -14,7 +14,7 @@ const tasksSlicer = createSlice({
             state.hideDoneTasks = !state.hideDoneTasks;
         },
         toggleDoneTask: (state, action) => {
-            const index = state.tasks.findIndex(task => task.id === action.payload);
+            const index = state.tasks.findIndex(({id}) => id === action.payload);
             state.tasks[index].done = !state.tasks[index].done;
         },
         markAllDoneTasks: state => {
@@ -23,7 +23,8 @@ const tasksSlicer = createSlice({
             })
         },
         removeTask: (state, action) => {
-            state.tasks = state.tasks.filter(task => task.id !== action.payload);
+            const index = state.tasks.findIndex(({id}) => id === action.payload);
+            state.tasks.splice(index, 1);   
         }
     }
 })
