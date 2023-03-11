@@ -1,8 +1,8 @@
-import Header from "./Header";
-import Form from "./Form"
-import Section from "./Section";
-import Tasks from "./Tasks";
-import Buttons from "./Buttons";
+import Header from "./common/Header";
+import Form from "./features/tasks/Form"
+import Section from "./common/Section";
+import Tasks from "./features/tasks/TasksList";
+import Buttons from "./features/tasks/Buttons";
 import { ThemeProvider } from "styled-components";
 import useTasks from "./useTasks";
 import { useState } from "react";
