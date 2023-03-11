@@ -31,7 +31,6 @@ function AppTasks() {
 
     const {
         markAllDoneTasks,
-        toggleDoneTask,
         removeTask,
     } = useTasks();
 
@@ -47,7 +46,6 @@ function AppTasks() {
             <Section
                 title={"Lista zadań"}
                 body={<Tasks
-                    toggleDoneTask={toggleDoneTask}
                     removeTask={removeTask} />}
                 buttons={<Buttons
                     disabled={tasks.every(({ done }) => done)}

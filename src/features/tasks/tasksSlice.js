@@ -8,14 +8,19 @@ const tasksSlicer = createSlice({
     },
     reducers: {
         addTask: (({ tasks }, { payload }) => {
-                tasks.push(payload)
-            }),
+            tasks.push(payload)
+        }),
         toggleHideDoneTasks: state => {
             state.hideDoneTasks = !state.hideDoneTasks;
+        },
+        toggleDoneTask: (state, action) => {
+            const index = state.tasks.findIndex(task => task.id === action.payload);
+            state.tasks[index].done = !state.tasks[index].done;
         }
     }
 })
 
-export const { addTask, toggleHideDoneTasks } = tasksSlicer.actions;
+export const { addTask, toggleHideDoneTasks, toggleDoneTask } = tasksSlicer.actions;
 export const selectTasks = ({ tasks }) => tasks;
 export default tasksSlicer.reducer;
+  
