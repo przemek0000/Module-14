@@ -3,16 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const tasksSlicer = createSlice({
     name: "tasks",
     initialState: {
-        tasks: []
+        tasks: [],
+        hideDoneTasks: false
     },
     reducers: {
-        addTask: (
-            ({ tasks }, { payload }) => {
+        addTask: (({ tasks }, { payload }) => {
                 tasks.push(payload)
-            })
+            }),
+        toggleHideDoneTasks: state => {
+            state.hideDoneTasks = !state.hideDoneTasks;
+        }
     }
 })
 
-export const { addTask } = tasksSlicer.actions;
-export const selectTasks = ({tasks}) => tasks;
+export const { addTask, toggleHideDoneTasks } = tasksSlicer.actions;
+export const selectTasks = ({ tasks }) => tasks;
 export default tasksSlicer.reducer;

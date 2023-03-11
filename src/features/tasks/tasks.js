@@ -5,7 +5,6 @@ import Tasks from "./TasksList";
 import Buttons from "./Buttons";
 import { ThemeProvider } from "styled-components";
 import useTasks from "../../useTasks";
-import { useState } from "react";
 import { selectTasks } from "./tasksSlice";
 import { useSelector } from "react-redux";
 
@@ -28,19 +27,12 @@ const theme = {
 };
 
 function AppTasks() {
-    const [hideDoneTasks, setHideDoneTasks] = useState(JSON.parse(localStorage.getItem("hideDoneTasks")) || false);
+    const { tasks } = useSelector(selectTasks);
 
-    const toggleHideDoneTasks = () => {
-        setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
-    }
-
-    const {tasks} = useSelector(selectTasks);
-    
     const {
         markAllDoneTasks,
         toggleDoneTask,
         removeTask,
-        addNewTask
     } = useTasks();
 
     return (
@@ -50,18 +42,15 @@ function AppTasks() {
             />
             <Section
                 title={"Dodaj nowe zadanie"}
-                body={<Form addNewTask={addNewTask} />}
+                body={<Form />}
             />
             <Section
                 title={"Lista zadań"}
-                body={<Tasks tasks={tasks}
-                    hideDoneTasks={hideDoneTasks}
+                body={<Tasks
                     toggleDoneTask={toggleDoneTask}
                     removeTask={removeTask} />}
-                buttons={<Buttons tasks={tasks}
-                    hideDoneTasks={hideDoneTasks}
+                buttons={<Buttons
                     disabled={tasks.every(({ done }) => done)}
-                    toggleHideDoneTasks={toggleHideDoneTasks}
                     markAllDoneTasks={markAllDoneTasks} />}
             />
         </ ThemeProvider>
