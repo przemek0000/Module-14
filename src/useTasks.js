@@ -30,10 +30,10 @@ const useTasks = () => {
         setTasks(tasks => tasks.filter(task => task.id !== id))
     }
 
-    const addNewTask = (readInput) => (
+    const addNewTask = (newTaskContent ) => (
         setTasks(tasks => [...tasks,
         {
-            content: readInput,
+            content: newTaskContent ,
             done: false,
             id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
         }]

@@ -5,20 +5,20 @@ import { addTask } from "../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
 
 const Form = () => {
-    const [readInput, setReadInput] = useState("");
+    const [newTaskContent , setnewTaskContent ] = useState("");
     const refInput = useRef(null);
     const dispatch = useDispatch();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const trimReadInput = readInput.trim();
-        if (trimReadInput !== "") {
+        const trimnewTaskContent  = newTaskContent .trim();
+        if (trimnewTaskContent  !== "") {
             dispatch(addTask({
                 id: nanoid(),
-                content: trimReadInput,
+                content: trimnewTaskContent ,
                 done: false
             }))
-            setReadInput("");
+            setnewTaskContent ("");
         }
         refInput.current.focus();
     }
@@ -27,8 +27,8 @@ const Form = () => {
         <StyledForm onSubmit={onFormSubmit}>
             <StyledInput
                 ref={refInput}
-                value={readInput}
-                onChange={({ target }) => setReadInput(target.value)}
+                value={newTaskContent }
+                onChange={({ target }) => setnewTaskContent (target.value)}
                 placeholder="Co jest do zrobienia?"
                 autoFocus />
             <StyledButton>
