@@ -1,9 +1,9 @@
 import { StyledButton } from "./styled";
-import { selectTasksState, toggleHideDoneTasks, markAllDoneTasks } from "../tasksSlice";
+import { selectTasks, toggleHideDoneTasks, markAllDoneTasks } from "../tasksSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const Buttons = ({ disabled}) => {
-    const { tasks, hideDoneTasks } = useSelector(selectTasksState);
+    const { tasks, hideDoneTasks } = useSelector(selectTasks);
     const dispatch = useDispatch();
     return (
         tasks.length > 0 && (

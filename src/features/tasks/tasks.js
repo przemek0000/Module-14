@@ -4,8 +4,7 @@ import Section from "../../common/Section";
 import Tasks from "./TasksList";
 import Buttons from "./Buttons";
 import { ThemeProvider } from "styled-components";
-import useTasks from "../../useTasks";
-import { selectTasksState } from "./tasksSlice";
+import { selectTasks } from "./tasksSlice";
 import { useSelector } from "react-redux";
 
 const theme = {
@@ -27,11 +26,7 @@ const theme = {
 };
 
 function AppTasks() {
-    const { tasks } = useSelector(selectTasksState);
-
-    const {
-        removeTask,
-    } = useTasks();
+    const { tasks } = useSelector(selectTasks);
 
     return (
         <ThemeProvider theme={theme}>
