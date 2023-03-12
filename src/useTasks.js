@@ -7,7 +7,7 @@ const useTasks = () => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
 
-    const markAllDoneTasks = () => (
+    const setAllDoneTasks = () => (
         setTasks(
             tasks.map(task => (
                 { ...task, done: true }
