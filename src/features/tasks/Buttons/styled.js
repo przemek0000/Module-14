@@ -18,3 +18,7 @@ export const StyledButton = styled.button`
         color: grey;
     }
 `;
+
+export const StyledGetExampleTasksButton = styled.button`
+    
+`

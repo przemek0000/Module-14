@@ -2,7 +2,7 @@ import Header from "../../common/Header";
 import Form from "./Form"
 import Section from "../../common/Section";
 import Tasks from "./TasksList";
-import Buttons from "./Buttons";
+import { Buttons, GetExampleTasksButton } from "./Buttons";
 import { ThemeProvider } from "styled-components";
 import { selectTasks } from "./tasksSlice";
 import { useSelector } from "react-redux";
@@ -32,8 +32,10 @@ function AppTasks() {
         <ThemeProvider theme={theme}>
             <Header title={"Lista zadań"} />
             <Section
+                primary={"primary"}
                 title={"Dodaj nowe zadanie"}
                 body={<Form />}
+                button={< GetExampleTasksButton />}
             />
             <Section
                 title={"Lista zadań"}

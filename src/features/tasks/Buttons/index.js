@@ -1,8 +1,8 @@
-import { StyledButton } from "./styled";
+import { StyledButton, StyledGetExampleTasksButton } from "./styled";
 import { selectTasks, toggleHideDoneTasks, setAllDoneTasks } from "../tasksSlice";
 import { useSelector, useDispatch } from "react-redux";
 
-const Buttons = ({ disabled}) => {
+export const Buttons = ({ disabled }) => {
     const { tasks, hideDoneTasks } = useSelector(selectTasks);
     const dispatch = useDispatch();
     return (
@@ -25,5 +25,10 @@ const Buttons = ({ disabled}) => {
     )
 }
 
-
-export default Buttons;
+export const GetExampleTasksButton = () => {
+    return (
+        <StyledGetExampleTasksButton as={StyledButton}>
+            Pobierz przykładowe zadania
+        </StyledGetExampleTasksButton>
+    )
+}

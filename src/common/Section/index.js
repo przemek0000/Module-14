@@ -1,14 +1,11 @@
-import { StyledSection, StyledDiv, StyledHeader, StyledBody } from "./styled";
+import { StyledSection, StyledHeader, StyledBody } from "./styled";
 
-const Section = ({ title, body, buttons }) => (
+const Section = ({ primary, title, body, buttons, button }) => (
     <StyledSection>
-        <StyledHeader>
-            <div>
+        <StyledHeader primary={primary}>
                 {title}
-            </div>
-            <StyledDiv>
+                {button}
                 {buttons}
-            </StyledDiv>
         </StyledHeader>
         <StyledBody>
             {body}
