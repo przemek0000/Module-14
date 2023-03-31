@@ -1,7 +1,21 @@
-import AppTasks from "./features/tasks/tasks";
+import { Link, Outlet } from "react-router-dom";
 
-function App() {
-    return <AppTasks />
+export default function App() {
+    return (
+        <nav>
+            <ul>
+                <li>
+                    <Link to={`zadania`}>Zadania</Link>
+                </li>
+                <li>
+                    <Link to={`autor`}>O autorze</Link>
+                </li>
+            </ul>
+            <div>
+                <Outlet />
+            </div>
+        </nav>
+
+    )
 }
 
-export default App;

@@ -19,6 +19,4 @@ export const StyledButton = styled.button`
     }
 `;
 
-export const StyledGetExampleTasksButton = styled.button`
-    
-`
+export const StyledGetExampleTasksButton = styled.button``

@@ -4,15 +4,59 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StyledGlobal from './styled';
 import store from './store';
+import { ThemeProvider } from "styled-components";
 import { Provider } from 'react-redux';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from "./errorPage/Error";
+import AppTasks from './tasksListPage/features/tasks/tasks';
+import Author from './author';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <AppTasks /> },
+      {
+        path: "zadania",
+        element: <AppTasks />
+      },
+      {
+        path: "autor",
+        element: <Author />
+      }
+    ]
+  }
+])
+
+const theme = {
+  colors: {
+    done: {
+      display: "hsl(120, 100%, 25%)",
+      hover: "hsl(120, 100%, 28%)",
+      active: "hsl(120, 100%, 31%)"
+    },
+    remove: {
+      display: "hsl(0, 100%, 50%)",
+      hover: "hsl(0, 100%, 62%)",
+      active: "hsl(0, 100%, 68%)"
+    }
+  },
+  breakPoints: {
+    mobiles: 767
+  }
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <StyledGlobal />
-      <App />
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+        <StyledGlobal />
+      </Provider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
