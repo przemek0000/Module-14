@@ -1,19 +1,20 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { StyledLi, StyledLink, StyledUl, StyleApp } from "./styled";
 
 export default function App() {
     return (
         <nav>
-            <ul>
-                <li>
-                    <Link to={`zadania`}>Zadania</Link>
-                </li>
-                <li>
-                    <Link to={`autor`}>O autorze</Link>
-                </li>
-            </ul>
-            <div>
+            <StyledUl>
+                <StyledLi>
+                    <StyledLink to={`zadania`}>Zadania</StyledLink>
+                </StyledLi>
+                <StyledLi>
+                    <StyledLink to={`autor`}>O autorze</StyledLink>
+                </StyledLi>
+            </StyledUl>
+            <StyleApp >
                 <Outlet />
-            </div>
+            </StyleApp>
         </nav>
 
     )
