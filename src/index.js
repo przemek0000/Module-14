@@ -10,6 +10,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from "./errorPage/Error";
 import AppTasks from './tasksListPage/features/tasks/tasks';
 import Author from './author';
+import TaskPage from './taskPage'
+import { loader as loaderTask } from './taskPage';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,11 @@ const router = createBrowserRouter([
       {
         path: "autor",
         element: <Author />
+      },
+      {
+        path: "zadania/:zadaniaId",
+        element: <TaskPage />,
+        loader: loaderTask
       }
     ]
   }

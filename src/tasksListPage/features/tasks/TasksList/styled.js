@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const StyledTasks = styled.ul`
     list-style: none;
@@ -50,3 +51,14 @@ export const StyledButtons = styled.button`
         }
     `}
 `;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    &:link{
+        color:black;
+    }
+    &:visited{
+        color:black;
+    }
+   
+`

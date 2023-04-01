@@ -34,7 +34,7 @@ const tasksSlicer = createSlice({
         fetchExampleTasksSuccess: (state, { payload: tasks }) => {
             state.tasks = tasks;
             state.loading = false;
-        },
+        }
     }
 })
 
@@ -44,4 +44,9 @@ export const { addTask, toggleHideDoneTasks,
     fetchExampleTasksSuccess } = tasksSlicer.actions;
 
 export const selectTasks = state => state.tasks;
+
+export const getTaskById = (state, taskId) => {
+    return selectTasks(state).tasks.find(({ id }) => id === taskId)
+}
+
 export default tasksSlicer.reducer;
