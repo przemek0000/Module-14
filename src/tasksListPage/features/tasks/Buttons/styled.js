@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 
 export const StyledButton = styled.button`
     padding: 0px;
@@ -19,4 +20,8 @@ export const StyledButton = styled.button`
     }
 `;
 
-export const StyledGetExampleTasksButton = styled.button``
+export const StyledGetExampleTasksButton = styled.button`
+    ${(props) => props.disabled && css`
+    transition: none;
+    `}
+`
