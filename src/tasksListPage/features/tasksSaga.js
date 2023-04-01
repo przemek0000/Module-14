@@ -1,5 +1,5 @@
 import { put, call, takeLatest, takeEvery, select, delay } from 'redux-saga/effects';
-import { fetchExampleTasksLoading, fetchExampleTasksSuccess, selectTasks, setTasks } from './tasks/tasksSlice';
+import { fetchExampleTasksLoading, fetchExampleTasksSuccess, selectTasks } from './tasks/tasksSlice';
 import getExampleTasks from './getExampleTasks';
 import { saveTasksInLocalStorage } from './tasks/tasksLocalStorage';
 

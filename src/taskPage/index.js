@@ -11,12 +11,13 @@ export async function loader({ params }) {
 const TaskPage = () => {
     const taskId = useLoaderData();
     const task = useSelector(state => getTaskById(state, taskId))
+
     return (
         <>
             <Header title={"Szczegóły zadania"} />
             <Section
                 title={task ? task.content : "Nie znaleziono zadania"}
-                body={<><strong>Ukończono:</strong> {task.done ? "tak" : "nie"}</>}
+                body={<>{task ? <strong>Ukończono:</strong> : ""} {task ? task.done ? "tak" : "nie" : ""}</>}
             />
         </>
     )

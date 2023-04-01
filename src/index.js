@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       }
     ]
   }
-])
+], { basename: "/to-do-list" })
 
 const theme = {
   colors: {
