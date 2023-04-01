@@ -6,7 +6,7 @@ import { saveTasksInLocalStorage } from './tasks/tasksLocalStorage';
 function* fetchExampleTasksHandler() {
     try {
         const exampleTasks = yield call(getExampleTasks)
-        yield delay(1000)
+        yield delay(Math.random() * 900)
         yield put(setTasks(exampleTasks));
     } catch (error) {
         yield call(alert, "Can't get example data...:(")

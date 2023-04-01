@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
-import { StyledLi, StyledLink, StyledUl, StyleApp } from "./styled";
+import { StyledLi, StyledNavLink, StyledUl, StyleApp } from "./styled";
 
 export default function App() {
     return (
         <nav>
             <StyledUl>
                 <StyledLi>
-                    <StyledLink to={`zadania`}>Zadania</StyledLink>
+                    <StyledNavLink to={`zadania`}>Zadania</StyledNavLink>
                 </StyledLi>
                 <StyledLi>
-                    <StyledLink to={`autor`}>O autorze</StyledLink>
+                    <StyledNavLink to={`autor`}>O autorze</StyledNavLink>
                 </StyledLi>
             </StyledUl>
             <StyleApp >

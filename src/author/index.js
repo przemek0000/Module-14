@@ -4,7 +4,7 @@ import Section from "../tasksListPage/common/Section";
 const Author = () => {
     return (
         <>
-           <Header title={"O mnie"} />
+           <Header title={"O autorze"} />
             <Section
                 title={"Pi"}
                 body={<div>O mnie wiecej tematu</div>}

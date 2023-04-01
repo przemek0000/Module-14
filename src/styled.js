@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
@@ -30,13 +30,18 @@ export const StyledUl = styled.ul`
   background: teal;
   list-style: none;
   padding: 20px;
+  margin: 0px;
 `;
 
 export const StyledLi = styled.li`
   display: inline-block;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
   color: white;
   text-decoration: none;
+
+  &.active{
+    font-weight: 700
+  }
 `
