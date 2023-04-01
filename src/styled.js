@@ -31,6 +31,7 @@ export const StyledUl = styled.ul`
   list-style: none;
   padding: 20px;
   margin: 0px;
+  font-size: 20px;
 `;
 
 export const StyledLi = styled.li`
