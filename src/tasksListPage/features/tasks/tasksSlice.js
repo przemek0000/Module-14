@@ -34,19 +34,29 @@ const tasksSlicer = createSlice({
         fetchExampleTasksSuccess: (state, { payload: tasks }) => {
             state.tasks = tasks;
             state.loading = false;
-        }
+        },
+
     }
 })
 
 export const { addTask, toggleHideDoneTasks,
     toggleDoneTask, setAllDoneTasks,
     removeTask, fetchExampleTasksLoading,
-    fetchExampleTasksSuccess } = tasksSlicer.actions;
+    fetchExampleTasksSuccess,
+    searchTask } = tasksSlicer.actions;
 
 export const selectTasks = state => state.tasks;
 
 export const getTaskById = (state, taskId) => {
     return selectTasks(state).tasks.find(({ id }) => id === taskId)
+}
+
+export const filterTasksbySearch = (state, search) => {
+    if (!search || search.trim() === "") {
+        return selectTasks(state).tasks;
+    }
+
+    return selectTasks(state).tasks.filter(({ content }) => content.includes(search));
 }
 
 export default tasksSlicer.reducer;

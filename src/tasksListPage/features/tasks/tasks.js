@@ -4,7 +4,6 @@ import Section from "../../common/Section";
 import Tasks from "./TasksList";
 import Search from "./Search/index";
 import { Buttons, ExampleTasksButton } from "./Buttons";
-
 import { selectTasks } from "./tasksSlice";
 import { useSelector } from "react-redux";
 

@@ -8,6 +8,7 @@ html {
   background-color: #e6e6e6;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
+  user-select: none;
 }
 
 *, ::after, ::before {

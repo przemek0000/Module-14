@@ -2,7 +2,7 @@
   "name": "to-do-list",
   "version": "1.5.0",
   "private": true,
-  "homepage": "https://przemek0000.github.io/Module-14/",
+  "homepage": "https://przemek0000.github.io/to-do-list/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",

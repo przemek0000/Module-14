@@ -1,5 +1,5 @@
 const getExampleTasks = async () => {
-    const response = await fetch("/Module-14/exampleTasks.json")
+    const response = await fetch("/to-do-list/exampleTasks.json")
 
     if (!response.ok) {
         new Error(response.statusText)
