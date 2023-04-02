@@ -18,7 +18,7 @@ html {
 export default StyledGlobal;
 
 export const StyleApp = styled.div`
-  max-width: 1200px;
+  max-width: ${({ theme }) => theme.maxWidth}px;
   margin: 0 auto;
   padding: 10px;
   background-color: #e6e6e6;

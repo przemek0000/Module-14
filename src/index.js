@@ -12,6 +12,7 @@ import AppTasks from './tasksListPage/features/tasks/tasks';
 import Author from './author';
 import TaskPage from './taskPage'
 import { loader as loaderTask } from './taskPage';
+import Demo from './demo';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <AppTasks /> },
+      { index: true, element: <Demo /> },
       {
         path: "zadania",
         element: <AppTasks />
@@ -52,7 +53,8 @@ const theme = {
   },
   breakPoints: {
     mobiles: 767
-  }
+  },
+  maxWidth: 1200
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

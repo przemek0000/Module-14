@@ -11,6 +11,9 @@ export default function App() {
                 <StyledLi>
                     <StyledNavLink to={`autor`}>O autorze</StyledNavLink>
                 </StyledLi>
+                <StyledLi>
+                    <StyledNavLink to={``}>Demo</StyledNavLink>
+                </StyledLi>
             </StyledUl>
             <StyleApp >
                 <Outlet />
