@@ -56,7 +56,7 @@ export const filterTasksbySearch = (state, search) => {
         return selectTasks(state).tasks;
     }
 
-    return selectTasks(state).tasks.filter(({ content }) => content.includes(search));
+    return selectTasks(state).tasks.filter(({ content }) => content.toLowerCase().includes(search.toLowerCase()));
 }
 
 export default tasksSlicer.reducer;

@@ -10,17 +10,21 @@ const Search = () => {
     const search = (new URLSearchParams(location.search)).get("search");
 
     const onInputChange = ({ currentTarget }) => {
-        navigate('/success', { replace: true });
+        const searchParams = new URLSearchParams(location.search)
+        if (currentTarget.value.trim() === "") {
+            return navigate('');
+        }
         submit(currentTarget.form)
+
     };
 
     return (
-        <Form>
+        <Form autoComplete="off">
             <Input
                 placeholder=" Filtruj zadania "
                 name="search"
                 type="search"
-                value={search}
+                value={search || ""}
                 onChange={onInputChange}
             />
         </Form>
