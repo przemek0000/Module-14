@@ -12,7 +12,7 @@
 
 ## Demo
 
-[Website](https://przemek0000.github.io/Module-14/)
+[Website](https://przemek0000.github.io/to-do-list/)
 
 ## Introduction
 
@@ -22,18 +22,18 @@ Version 1.4 include everything from versions before, plus some extra features. T
 
 ## Technology used
 
-- HTML
-- CSS
-- JAVASCRIPT ES6+
-- BEM CONVENTION
-- GRID
-- FLEX
-- MEDIA QUERY
-- IMMUTABILITY OBJECTS
-- REACT.JS
-- REDUX
-- REDUX-SAGA
-- REACT ROUTER
+- `HTML`
+- `CSS`
+- `JAVASCRIPT ES6+`
+- `BEM CONVENTION`
+- `GRID`
+- `FLEX`
+- `MEDIA QUERY`
+- `IMMUTABILITY OBJECTS`
+- `REACT.JS`
+- `REDUX`
+- `REDUX-SAGA`
+- `REACT ROUTER`
 
 ## Available Scripts
 

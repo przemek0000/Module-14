@@ -1,1 +1,3 @@
-export default "szukaj";
+const query = "szukaj";
+
+export default query;
