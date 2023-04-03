@@ -6,15 +6,15 @@ import StyledGlobal from './styled';
 import store from './store';
 import { ThemeProvider } from "styled-components";
 import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from "./errorPage/Error";
 import AppTasks from './tasksListPage/features/tasks/tasks';
-import Author from './author';
+import Author from './authorPage';
 import TaskPage from './taskPage'
 import { loader as loaderTask } from './taskPage';
-import Demo from './demo';
+import Demo from './demoPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       }
     ]
   }
-], { basename: "/to-do-list" })
+])
 
 const theme = {
   colors: {
@@ -54,7 +54,7 @@ const theme = {
   breakPoints: {
     mobiles: 767
   },
-  maxWidth: 1200
+  maxWidth: 1100
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
