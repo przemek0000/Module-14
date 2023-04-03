@@ -2,7 +2,7 @@ import { StyledTasks, StyledList, StyledButtons, StyledLink } from "./styled";
 import { selectTasks, toggleDoneTask, removeTask, filterTasksbySearch } from "../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import query from "../searchQueryParamName";
+import query from "../searchQueryParamName.js";
 
 const Tasks = () => {
     const { hideDoneTasks } = useSelector(selectTasks);

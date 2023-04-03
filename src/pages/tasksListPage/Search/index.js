@@ -1,7 +1,7 @@
 
 import Input from "./styled";
 import { Form, useLocation, useNavigate, useSubmit } from "react-router-dom";
-import query from "../searchQueryParamName";
+import query from "../searchQueryParamName.js";
 
 const Search = () => {
     const location = useLocation();

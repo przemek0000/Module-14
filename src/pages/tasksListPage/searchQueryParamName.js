@@ -1,3 +1,3 @@
-const query = "szukaj";
+const query = "search";
 
 export default query;
