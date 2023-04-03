@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import background from "../../demo.gif";
 
 const StyledDiv = styled.div`
     max-width: 1250px;
     height: 680px;
-    background-image: url("/Module-14/demo.gif");
+    background-image: url("${background}");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;

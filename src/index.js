@@ -6,7 +6,7 @@ import StyledGlobal from './styled';
 import store from './store';
 import { ThemeProvider } from "styled-components";
 import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from "./pages/errorPage/Error";
 import AppTasks from './pages/tasksListPage/tasks';
 import Author from './pages/authorPage';
@@ -14,7 +14,7 @@ import TaskPage from './pages/taskPage'
 import { loader as loaderTask } from './pages/taskPage';
 import Demo from './pages/demoPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
