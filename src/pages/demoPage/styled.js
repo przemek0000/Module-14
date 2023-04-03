@@ -8,6 +8,19 @@ const StyledDiv = styled.div`
     background-repeat: no-repeat;
     background-position: top center;
     background-position-y: 30px;
+    
+    animation: revealFromBehind 0.4s ease forwards;
+    animation-direction: alternate;
+    @keyframes revealFromBehind {
+    0% {
+      opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
 `
 
 export default StyledDiv;

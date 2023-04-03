@@ -6,12 +6,13 @@ import Search from "./Search/index";
 import { Buttons, ExampleTasksButton } from "./Buttons";
 import { selectTasks } from "./tasksSlice";
 import { useSelector } from "react-redux";
+import StyledDiv from "./styled";
 
 function AppTasks() {
     const { tasks } = useSelector(selectTasks);
 
     return (
-        <>
+        <StyledDiv>
             <Header title={"Lista zadań"} />
             <Section
                 primary={"primary"}
@@ -29,7 +30,7 @@ function AppTasks() {
                 buttons={<Buttons
                     disabled={tasks.every(({ done }) => done)} />}
             />
-        </>
+        </ StyledDiv>
     );
 }
 

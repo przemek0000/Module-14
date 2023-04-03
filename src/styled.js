@@ -44,6 +44,7 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 
   &.active{
-    font-weight: 700
+    font-weight: 700;
+    text-decoration: underline;
   }
 `
