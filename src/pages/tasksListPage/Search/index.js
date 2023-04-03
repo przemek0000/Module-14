@@ -1,13 +1,14 @@
 
 import Input from "./styled";
 import { Form, useLocation, useNavigate, useSubmit } from "react-router-dom";
+import query from "../searchQueryParamName";
 
 const Search = () => {
     const location = useLocation();
     const submit = useSubmit();
     const navigate = useNavigate();
 
-    const search = (new URLSearchParams(location.search)).get("search");
+    const search = (new URLSearchParams(location.search)).get(query);
 
     const onInputChange = ({ currentTarget }) => {
 

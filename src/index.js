@@ -54,7 +54,6 @@ const theme = {
   breakPoints: {
     mobiles: 767
   },
-  maxWidth: 1100
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
