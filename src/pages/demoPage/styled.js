@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
     max-width: 1250px;
     height: 680px;
-    background-image: url("Module-14/demo.gif");
+    background-image: url("/Module-14/demo.gif");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;
