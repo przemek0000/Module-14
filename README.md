@@ -12,13 +12,13 @@
 
 ## Demo
 
-[Website](https://przemek0000.github.io/Module-13/)
+[Website](https://przemek0000.github.io/Module-14/)
 
 ## Introduction
 
 ![titleImage](public/to-do-list.jpg)
 
-This is updated version TO-DO-LIST version 1.4 created in react.js library. We can find here everything what is in previous one plus extra save tasks feature(this version doesent store tasks in memory). Version 1.4 was extented for redux library.
+Version 1.4 include everything from versions before, plus some extra features. This application is extented by components routing and search option. You can fetch example tasks as well.
 
 ## Technology used
 
@@ -32,6 +32,8 @@ This is updated version TO-DO-LIST version 1.4 created in react.js library. We c
 - IMMUTABILITY OBJECTS
 - REACT.JS
 - REDUX
+- REDUX-SAGA
+- REACT ROUTER
 
 ## Available Scripts
 

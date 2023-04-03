@@ -3,11 +3,11 @@ import { StyledSection, StyledHeader, StyledBody } from "./styled";
 const Section = ({ primary, title, body, buttons, button }) => (
     <StyledSection>
         <StyledHeader primary={primary}>
-                {title}
-                {button}
-                {buttons}
+            {title}
+            {button}
+            {buttons}
         </StyledHeader>
-        <StyledBody>
+        <StyledBody >
             {body}
         </StyledBody>
     </StyledSection>

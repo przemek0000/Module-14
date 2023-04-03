@@ -9,7 +9,7 @@ export default function App() {
                     <StyledNavLink to={`zadania`}>Zadania</StyledNavLink>
                 </StyledLi>
                 <StyledLi>
-                    <StyledNavLink to={`autor`}>O autorze</StyledNavLink>
+                    <StyledNavLink to={`autor`}>Od autora</StyledNavLink>
                 </StyledLi>
                 <StyledLi>
                     <StyledNavLink to={``}>Demo</StyledNavLink>

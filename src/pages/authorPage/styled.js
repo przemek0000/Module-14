@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
     animation: revealFromRight 0.5s ease forwards;
     animation-direction: alternate;
+
     @keyframes revealFromRight {
     0% {
       opacity: 0;
