@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
-import Header from "../tasksListPage/common/Header";
-import Section from "../tasksListPage/common/Section";
+import Header from "../../common/Header";
+import Section from "../../common/Section";
 import { useSelector } from "react-redux";
-import { getTaskById } from "../tasksListPage/features/tasks/tasksSlice";
+import { getTaskById } from "../tasksListPage/tasksSlice";
 
 export async function loader({ params }) {
     return params.zadaniaId;

@@ -1,5 +1,5 @@
-import Header from "../tasksListPage/common/Header";
-import Section from "../tasksListPage/common/Section";
+import Header from "../../common/Header";
+import Section from "../../common/Section";
 
 const Author = () => {
     return (

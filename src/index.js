@@ -7,12 +7,12 @@ import store from './store';
 import { ThemeProvider } from "styled-components";
 import { Provider } from 'react-redux';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from "./errorPage/Error";
-import AppTasks from './tasksListPage/features/tasks/tasks';
-import Author from './authorPage';
-import TaskPage from './taskPage'
-import { loader as loaderTask } from './taskPage';
-import Demo from './demoPage';
+import ErrorPage from "./pages/errorPage/Error";
+import AppTasks from './pages/tasksListPage/tasks';
+import Author from './pages/authorPage';
+import TaskPage from './pages/taskPage'
+import { loader as loaderTask } from './pages/taskPage';
+import Demo from './pages/demoPage';
 
 const router = createHashRouter([
   {
