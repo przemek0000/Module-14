@@ -6,11 +6,13 @@ const Author = () => {
 
     return (
         <StyledDiv>
-            <Header title={"Podziękowania"} />
+            {/* <Header title={""} /> */}
             <Section
-                title={"YouCode"}
-                body={<div>Ze względu, że to było ostatnie zadanie przed pracą grupową, chciałbym podziękować @Krzyśkowi Dąbrowskiemu i całemu zespołowi za owocną pracę, a szczególnie
-                    @Wojciech Knott i @Kamil Ziemann za sprawdzanie i krytykowanie moich prac XD 😛. Potrzebowałem kilku miesięcy by dojść od "0" do tego momentu 🚀.
+                title={"O mnie"}
+                body={<div>Od zawsze interesowałem się komputerami 💻, swój pierwszy komputer dostałem w wieku 8 lat. Obecnie ucze się Frontend Development z YouCode
+                    do tworzenia aplikacji internetowych. W wolnych
+                    chwilach uprawiam sport - bieganie 🏃‍♂️, siłownia 💪. Interesuje mnie również rynek gdzie regularnie inwestuje na giełdzie. Z muzyki to lubię
+                    grać na pianinie 🎹, a jeśli chodzi o słuchanie to zależy od sytuacji w jakiej się znajduje - rock, dark techno, ambient, trance, muzyka filmowa, soundtracks.
                 </div>}
             />
         </ StyledDiv>
