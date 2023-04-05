@@ -35,6 +35,9 @@ const tasksSlicer = createSlice({
             state.tasks = tasks;
             state.loading = false;
         },
+        fetchExampleTasksError: (state) => {
+            state.loading = false;
+        }
 
     }
 })
@@ -43,7 +46,7 @@ export const { addTask, toggleHideDoneTasks,
     toggleDoneTask, setAllDoneTasks,
     removeTask, fetchExampleTasksLoading,
     fetchExampleTasksSuccess,
-    searchTask } = tasksSlicer.actions;
+    searchTask, fetchExampleTasksError } = tasksSlicer.actions;
 
 export const selectTasks = state => state.tasks;
 
