@@ -12,6 +12,7 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         const trimnewTaskContent = newTaskContent.trim();
+
         if (trimnewTaskContent !== "") {
             dispatch(addTask({
                 id: nanoid(),
@@ -20,6 +21,7 @@ const Form = () => {
             }))
             setnewTaskContent("");
         }
+        
         refInput.current.focus();
     }
 

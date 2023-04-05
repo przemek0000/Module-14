@@ -13,7 +13,6 @@ const StyledButton = styled.button`
     &:active {
         filter: brightness(1.25)
     }
-}
 `;
 
 export const StyledDiv = styled.div`

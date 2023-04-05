@@ -11,10 +11,10 @@ const Search = () => {
     const search = (new URLSearchParams(location.search)).get(query);
 
     const onInputChange = ({ currentTarget }) => {
-
         if (currentTarget.value.trim() === "") {
             return navigate('');
         }
+
         submit(currentTarget.form)
     };
 
