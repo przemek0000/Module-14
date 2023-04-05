@@ -22,7 +22,7 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledGetExampleTasksButton = styled.button`
-    ${(props) => props.disabled && css`
+    ${({ disabled }) => disabled && css`
     transition: none;
     `}
 `
