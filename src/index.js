@@ -11,7 +11,6 @@ import ErrorPage from "./pages/errorPage/Error";
 import AppTasks from './pages/tasksListPage/tasks';
 import Author from './pages/authorPage';
 import TaskPage from './pages/taskPage'
-import { loader as loaderTask } from './pages/taskPage';
 import Demo from './pages/demoPage';
 
 const router = createHashRouter([
@@ -22,17 +21,16 @@ const router = createHashRouter([
     children: [
       { index: true, element: <Demo /> },
       {
-        path: "zadania",
+        path: "tasks",
         element: <AppTasks />
       },
       {
-        path: "autor",
+        path: "author",
         element: <Author />
       },
       {
-        path: "zadania/:zadaniaId",
+        path: "tasks/:taskId",
         element: <TaskPage />,
-        loader: loaderTask
       }
     ]
   }

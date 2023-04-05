@@ -6,10 +6,10 @@ export default function App() {
         <nav>
             <StyledUl>
                 <StyledLi>
-                    <StyledNavLink to={`zadania`}>Zadania</StyledNavLink>
+                    <StyledNavLink to={`tasks`}>Zadania</StyledNavLink>
                 </StyledLi>
                 <StyledLi>
-                    <StyledNavLink to={`autor`}>O autorze</StyledNavLink>
+                    <StyledNavLink to={`author`}>O autorze</StyledNavLink>
                 </StyledLi>
                 <StyledLi>
                     <StyledNavLink to={``}>Demo</StyledNavLink>

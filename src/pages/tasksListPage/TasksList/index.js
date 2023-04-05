@@ -23,7 +23,7 @@ const Tasks = () => {
                         {task.done ? "✔" : ""}
                     </StyledButtons>
                     <div className={`task__content ${task.done ? "task__content--done" : ""}`}>
-                        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
+                        <StyledLink to={`/tasks/${task.id}`}>{task.content}</StyledLink>
                     </div>
                     <StyledButtons remove onClick={() => dispatch(removeTask(task.id))}>
                         🗑

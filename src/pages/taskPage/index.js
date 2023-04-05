@@ -6,13 +6,13 @@ import { getTaskById } from "../tasksListPage/tasksSlice";
 import StyledButton, { StyledDiv } from "./styled";
 
 export async function loader({ params }) {
-    return params.zadaniaId;
+    return params.taskId;
 }
 
 const TaskPage = () => {
-    const taskId = useParams();
+    const id = useParams();
     const navigate = useNavigate();
-    const task = useSelector(state => getTaskById(state, taskId.zadaniaId));
+    const task = useSelector(state => getTaskById(state, id.taskId));
 
     return (
         <StyledDiv>
