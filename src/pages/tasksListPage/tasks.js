@@ -13,19 +13,19 @@ function AppTasks() {
 
     return (
         <StyledDiv>
-            <Header title={"Lista zadań"} />
+            <Header title="Lista zadań" />
             <Section
-                primary={"primary"}
-                title={"Dodaj nowe zadanie"}
+                primary="primary"
+                title="Dodaj nowe zadanie"
                 body={<Form />}
                 button={< ExampleTasksButton />}
             />
             <Section
-                title={"Wyszukiwarka"}
+                title="Wyszukiwarka"
                 body={<Search />}
             />
             <Section
-                title={"Lista zadań"}
+                title="Lista zadań"
                 body={<Tasks />}
                 buttons={<Buttons
                     disabled={tasks.every(({ done }) => done)} />}

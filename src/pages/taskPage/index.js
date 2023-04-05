@@ -16,7 +16,7 @@ const TaskPage = () => {
 
     return (
         <StyledDiv>
-            <Header title={"Szczegóły zadania"} />
+            <Header title="Szczegóły zadania" />
             <Section
                 title={task ? task.content : "Nie znaleziono zadania"}
                 body={<>

@@ -5,23 +5,26 @@ import { useSelector, useDispatch } from "react-redux";
 export const Buttons = ({ disabled }) => {
     const { tasks, hideDoneTasks } = useSelector(selectTasks);
     const dispatch = useDispatch();
+
+    if (!tasks.length) {
+        return null;
+    }
+
     return (
-        tasks.length > 0 && (
-            <>
-                <StyledButton
-                    onClick={() => dispatch(toggleHideDoneTasks())}
-                >
-                    {`${hideDoneTasks ? "Pokaż " : "Ukryj "}`}
-                    ukończone
-                </StyledButton>
-                <StyledButton
-                    onClick={() => dispatch(setAllDoneTasks())}
-                    disabled={disabled}
-                >
-                    Ukończ wszystkie
-                </StyledButton>
-            </>
-        )
+        <>
+            <StyledButton
+                onClick={() => dispatch(toggleHideDoneTasks())}
+            >
+                {`${hideDoneTasks ? "Pokaż " : "Ukryj "}`}
+                ukończone
+            </StyledButton>
+            <StyledButton
+                onClick={() => dispatch(setAllDoneTasks())}
+                disabled={disabled}
+            >
+                Ukończ wszystkie
+            </StyledButton>
+        </>
     )
 }
 
@@ -31,7 +34,7 @@ export const ExampleTasksButton = () => {
 
     return (
         <StyledGetExampleTasksButton disabled={loading} as={StyledButton} onClick={() => dispatch(fetchExampleTasksLoading())}>
-            {loading? "Pobieranie..." : "Pobierz przykładowe zadania"}
+            {loading ? "Pobieranie..." : "Pobierz przykładowe zadania"}
         </StyledGetExampleTasksButton>
     )
 }
