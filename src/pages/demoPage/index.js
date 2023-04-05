@@ -1,10 +1,5 @@
 import StyledDiv from './styled';
 
-const Demo = () => {
-
-    return (
-        <StyledDiv />
-    )
-}
+const Demo = () => <StyledDiv />
 
 export default Demo;
