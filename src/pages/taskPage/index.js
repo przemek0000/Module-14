@@ -1,18 +1,18 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 import { useSelector } from "react-redux";
 import { getTaskById } from "../tasksListPage/tasksSlice";
-import StyledButton, {StyledDiv} from "./styled";
+import StyledButton, { StyledDiv } from "./styled";
 
 export async function loader({ params }) {
     return params.zadaniaId;
 }
 
 const TaskPage = () => {
+    const taskId = useParams();
     const navigate = useNavigate();
-    const taskId = useLoaderData();
-    const task = useSelector(state => getTaskById(state, taskId));
+    const task = useSelector(state => getTaskById(state, taskId.zadaniaId));
 
     return (
         <StyledDiv>
@@ -20,8 +20,8 @@ const TaskPage = () => {
             <Section
                 title={task ? task.content : "Nie znaleziono zadania"}
                 body={<>
-                    {task ? <strong>Ukończono:</strong> : ""}
-                    {task ? task.done ? "tak": "nie" : ""}
+                    {task ? <strong>Ukończono: </strong> : ""}
+                    {task ? task.done ? "tak" : "nie" : ""}
                     {<br />}
                     {<StyledButton onClick={() => { navigate(-1) }}>Cofnij</StyledButton>}
                 </>}
