@@ -22,7 +22,7 @@ const TaskPage = () => {
                 body={<>
                     {task ? <strong>Ukończono: </strong> : ""}
                     {task ? task.done ? "tak" : "nie" : ""}
-                    {<br />}
+                    <div></div>
                     {<StyledButton onClick={() => { navigate(-1) }}>Cofnij</StyledButton>}
                 </>}
             />
