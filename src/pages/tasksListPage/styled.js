@@ -1,18 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const StyledDiv = styled.div`
-animation: revealFromLeft 0.4s ease forwards;
-    animation-direction: alternate;
-    @keyframes revealFromLeft {
-    0% {
+const revealFromLeft = keyframes`
+   from {
       opacity: 0;
         transform: translateX(-25%);
     }
-    100% {
+    to {
       opacity: 1;
       transform: translateX(0);
     }
-}
+`
+
+const StyledDiv = styled.div`
+    animation: ${revealFromLeft} 0.4s ease forwards;
+    animation-direction: alternate;
 `
 
 export default StyledDiv;
