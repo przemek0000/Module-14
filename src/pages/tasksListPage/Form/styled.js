@@ -13,7 +13,7 @@ export const StyledForm = styled.form`
 export const StyledInput = styled.input`
     padding: 5px;
     border: 2px solid #e6e6e6;
-
+    width: 100%;
     &:focus {
         border: 2px solid black;
     }
